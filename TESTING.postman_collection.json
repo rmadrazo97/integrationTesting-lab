@@ -1,0 +1,316 @@
+{
+	"info": {
+		"_postman_id": "25a45d46-f112-4ec2-829c-c7adfea8d15f",
+		"name": "TESTING",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "get users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/users/all",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"users",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get user by email",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/users/findbyemail/username@gmail.com",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"users",
+								"findbyemail",
+								"username@gmail.com"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get user by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/users/findbyid/2",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"users",
+								"findbyid",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add user",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"UserName2\",\n    \"firstname\": \"FirstName2\",\n    \"lastname\": \"LastName2\",\n    \"email\": \"username2@gmail.com\"\n    }"
+						},
+						"url": {
+							"raw": "localhost:5000/users/add",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"users",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete user by id",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:5000/users/removebyid/2",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"users",
+								"removebyid",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "remove all",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"UserName2\",\n    \"firstname\": \"FirstName2\",\n    \"lastname\": \"LastName2\",\n    \"email\": \"username2@gmail.com\"\n    }"
+						},
+						"url": {
+							"raw": "localhost:5000/users/removeall",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"users",
+								"removeall"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "companies",
+			"item": [
+				{
+					"name": "get companies",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/companies/all",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"companies",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get user by name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/companies/findbyname/TestAutomationCompany",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"companies",
+								"findbyname",
+								"TestAutomationCompany"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get company by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/companies/findbyid/1",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"companies",
+								"findbyid",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add company",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"companyname\": \"TestAutomationCompany2\",\n    \"street\": \"Street2\",\n    \"phonenumber\": \"3105436781\"\n}"
+						},
+						"url": {
+							"raw": "localhost:5000/companies/add",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"companies",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete company by id",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:5000/companies/removebyid/2",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"companies",
+								"removebyid",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "remove all",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"UserName2\",\n    \"firstname\": \"FirstName2\",\n    \"lastname\": \"LastName2\",\n    \"email\": \"username2@gmail.com\"\n    }"
+						},
+						"url": {
+							"raw": "localhost:5000/companies/removeall",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"companies",
+								"removeall"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
